@@ -1,0 +1,55 @@
+<!-- <textarea rows="6" [value]="newPost" #postInput></textarea>
+<button type="submit" (click) ="addPost(postInput)"> Clicked meee</button>
+ //varaible data stored display -->
+<!-- String interpolation -->
+<!-- <p> {{newPost}} </p> --> 
+
+
+<!-- for string nd textarea same print -->
+<!-- <textarea rows="6" [(ngModel)]="enteredValue"></textarea>
+<button type="submit" (click) ="addPost()"> Clicked meee</button>
+
+<p> {{enteredValue}} </p> -->
+
+
+<!-- what u write textarea then click button show the data (user input data) -->
+ <!-- <mat-card>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="title" >
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput rows="6" [(ngModel)]="content"></textarea>
+    </mat-form-field>
+    
+    <button mat-button  color="primary" type="submit" (click) ="addPost()"> Clicked meee</button>   
+    <button mat-raised-button color="primary"  type="submit" (click) ="addPost()"> Clicked meee</button> -->
+    <!-- <button mat-stroked-button color="accent" type="submit" (click) ="addPost()"> Clicked meee
+    <mat-icon>favorite</mat-icon></button>
+</mat-card> -->
+
+
+<!-- <p> {{newPost}} </p> -->
+<!-- <p> {{enteredValue}} </p> -->
+
+
+<mat-card>
+
+    <form (submit)="addPost(postForm)" #postForm="ngForm">
+
+        <mat-form-field>
+            <input matInput type="text" name="title" ngModel required maxlength >
+        </mat-form-field>
+        
+        <mat-form-field>
+            <textarea matInput rows="6" name="content" ngModel required maxlength > </textarea>
+        </mat-form-field>
+        
+        <button 
+            mat-stroked-button
+            color="accent" 
+            type="submit"> Clicked meee
+        
+            <mat-icon>favorite</mat-icon></button>
+    </form>
+
+</mat-card>
